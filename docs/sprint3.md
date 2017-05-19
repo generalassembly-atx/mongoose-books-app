@@ -103,7 +103,7 @@ We don't need all of these today; in fact we're only really going to worry about
      // Create a character associated with a book
      app.post('/api/books/:book_id/characters', function (req, res) {
        // Get book id from url params (`req.params`)
-       var bookId = req.parades.book_id;
+       var bookId = req.params.book_id;
        db.Book.findById(bookId)
          .populate('author') // Reference to author
          // now we can worry about saving that character
